@@ -6,7 +6,7 @@ from multiprocessing import Process
 class Controller:
     endpoint = ('AMARCUS'*81)[:81]
     def __init__(self):
-        self.dht = MockDHT()
+        self.dht = MockDHT()  # Add true DHT here
         self.api = Iota(adapter='https://nodes.thetangle.org:443',local_pow=True)
         
     def getMeasurement(self):
